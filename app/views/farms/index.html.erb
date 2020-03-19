@@ -1,1 +1,5 @@
-<h1>Project AJ</h1>
+
+<% @farms.each do |farm| %>
+  <p><%= link_to farm.name, farm %></p>
+  <p><%= image_tag farm.image_url %></p>
+<% end %>
