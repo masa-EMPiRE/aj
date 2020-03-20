@@ -1,5 +1,10 @@
-
-<% @farms.each do |farm| %>
-  <p><%= link_to farm.name, farm %></p>
-  <p><%= image_tag farm.image_url %></p>
-<% end %>
+<div class="farm">
+  <% @farms.each do |farm| %>
+    <div class="image float-left">
+      <%= image_tag farm.image_url, :size =>'350x350' %>
+    </div>
+    <div class="description h-50">
+      <h3><%= farm.description %></h3>
+    </div><br>
+  <% end %>
+</div>

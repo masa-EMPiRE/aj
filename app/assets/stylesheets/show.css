@@ -1,0 +1,15 @@
+*{
+  text-align: left;
+  
+}
+
+.title{
+  margin: 20px 0px;
+  text-align: left;
+  color: rgb(56, 56, 56);
+  text-orientation: sideways;
+}
+
+.description{
+  margin: 20px 0px;
+}

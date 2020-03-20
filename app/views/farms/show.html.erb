@@ -1,10 +1,15 @@
-<div class="col-lg-6 mx-auto">
-  <div class="logo mb-3 text-center">
-    <%= @farm.name %>
+<div class="title">
+    <h1><%= @farm.name %></h1>
+</div>
+<div>
+  <div class="description">
+    <%= @farm.description %>
+</div>
+<div>
+  <div>
+    <%= @farm.event %>
   </div>
 </div>
-<div class="col-lg-6 mx-auto">
-  <div class="logo mb-3 text-center">
-    <%= @farm.description %>
-  </div>
+<div>
+  <%= image_tag @farm.image_url, :size =>'320x320' %>
 </div>
