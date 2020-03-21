@@ -1,10 +1,15 @@
 <div class="farm">
   <% @farms.each do |farm| %>
     <div class="image float-left">
-      <%= image_tag farm.image_url, :size =>'350x350' %>
+      <%= image_tag farm.image_url,  :size =>'350x350' %>
+      <div class="toshow">
+        <button type="button"><%= link_to farm.name, farm %></button>
+      </div>
     </div>
     <div class="description h-50">
       <h3><%= farm.description %></h3>
     </div><br>
+    <hr>
   <% end %>
 </div>
+

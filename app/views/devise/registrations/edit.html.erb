@@ -4,9 +4,9 @@
   </div>
 
   <% if current_user.avatar.attached? %>
-    <%= image_tag current_user.avatar.variant(resize_to_fill: [32, 32]).processed, class: "img-fluid rounded-circle" %>
+    <%= image_tag current_user.avatar.variant(resize_to_fill: [32, 32]).processed, class: "img-fluid" %>
   <% else %>
-    <%= image_tag "no_image", class: "img-fluid rounded-circle" %>
+    <%= image_tag "no_image", class: "img-fluid" %>
   <% end %>
 ​
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "mb-5" }) do |f| %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :event_entries
+  resources :events
   devise_for :users
   resources :farms
   root "farms#index"

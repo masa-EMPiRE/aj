@@ -5,9 +5,14 @@
 .description{
   width: 100%;
   padding-left: 50px;
-  padding-top: 30px;
+  padding-top: 150px;
 }
 
 .image{
   padding: 20px;
+}
+
+.toshow{
+  background-color: rgb(66, 64, 64);
+  text-align: center;
 }
