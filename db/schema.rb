@@ -44,8 +44,10 @@ ActiveRecord::Schema.define(version: 2020_03_21_023832) do
 
   create_table "events", force: :cascade do |t|
     t.string "eventname"
+    t.integer "farm_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["farm_id"], name: "index_events_on_farm_id"
   end
 
   create_table "farms", force: :cascade do |t|
@@ -55,7 +57,6 @@ ActiveRecord::Schema.define(version: 2020_03_21_023832) do
     t.text "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "event"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,6 +75,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_023832) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "event_entries", "events"
+  # add_foreign_key "event_entries", "events"
   add_foreign_key "event_entries", "users"
+  add_foreign_key "events", "farms"
 end

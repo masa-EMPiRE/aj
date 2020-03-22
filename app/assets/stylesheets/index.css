@@ -6,10 +6,12 @@
   width: 100%;
   padding-left: 50px;
   padding-top: 150px;
+  margin-bottom: 100px;
 }
 
 .image{
   padding: 20px;
+  margin-bottom: 10px;
 }
 
 .toshow{

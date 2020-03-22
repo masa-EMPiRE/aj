@@ -5,7 +5,6 @@ class CreateFarms < ActiveRecord::Migration[6.0]
       t.text :description
       t.string :email
       t.text :image_url
-      t.text :event
 
       t.timestamps
     end

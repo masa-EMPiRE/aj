@@ -2,7 +2,7 @@
 
   <%# ロゴ部分 %>
   <div class="nav-item">
-    <a class="navbar-brand logo" href="/"><i class="fas fa-carrot my-skyblue"></i>&nbsp; AJ -agrijohnnys</a>
+    <a class="navbar-brand logo text-success" href="/"><i class="fas fa-carrot my-skyblue"></i>&nbsp; AJ -agrijohnnys</a>
   </div>
 
   <%# メニュー格納時のボタン %>
@@ -13,7 +13,7 @@
   <%# メニュー %>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <% if user_signed_in? %>
-      <%= link_to edit_user_registration_path, class: "nav-item" do %>
+      <%= link_to edit_user_registration_path, class: "nav-item text-success" do %>
         <i class="far fa-user"></i>
       <% end %>
     <% else %>
