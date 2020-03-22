@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_023832) do
+ActiveRecord::Schema.define(version: 2020_03_22_021553) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_023832) do
     t.integer "farm_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "date"
     t.index ["farm_id"], name: "index_events_on_farm_id"
   end
 
@@ -75,7 +76,6 @@ ActiveRecord::Schema.define(version: 2020_03_21_023832) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  # add_foreign_key "event_entries", "events"
   add_foreign_key "event_entries", "users"
   add_foreign_key "events", "farms"
 end
