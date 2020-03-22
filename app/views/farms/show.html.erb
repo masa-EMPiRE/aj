@@ -1,0 +1,19 @@
+<div class="title">
+    <h1><%= @farm.name %></h1>
+</div>
+<div>
+  <div class="description">
+    <%= @farm.description %>
+</div>
+<div>
+  <div>
+    <%= image_tag @farm.image_url, :size =>'320x320' %>
+  </div>
+  <div class="event">
+    <h3>Event List</h3>
+    <% @farm.events.each do |event| %>
+      <%= event.eventname %>
+      <%= button_to "参加", event_event_entries_path(event) %>
+    <% end %>
+  </div>
+</div>

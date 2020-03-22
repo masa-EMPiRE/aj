@@ -1,0 +1,7 @@
+
+<%= form_with(model: @evententry, local: true) do |f|%>
+  <%= f.collection_select(:event_id, @events, :id, :eventname) %>
+  <%= f.submit %>
+<% end %>
+
+  

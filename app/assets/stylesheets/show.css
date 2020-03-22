@@ -1,0 +1,17 @@
+
+
+.title{
+  margin-top: 20px;
+  text-align: left;
+  color: rgb(56, 56, 56);
+  text-orientation: sideways;
+}
+
+.description{
+  padding: initial;
+  margin: 20px 0px;
+}
+
+.event{
+  padding: 20px 0px;
+}

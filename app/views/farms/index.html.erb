@@ -1,1 +1,23 @@
-<h1>Project AJ</h1>
+<div class="farm">
+  <% @farms.each do |farm| %>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-4">
+          <div class="image float-left mt-2 mb-2">
+            <%= image_tag farm.image_url,  :size =>'350x350' %>
+            <div class="toshow">
+                <button type="button"><%= link_to farm.name , farm %></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="description m-5 p-5">
+            <h3><%= farm.description %></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>
+
