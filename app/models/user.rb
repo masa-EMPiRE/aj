@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :username,      presence: true,   length: { maximum: 50 },   uniqueness: true
   validates :description,   presence: true,   length: { maximum: 1000 }
   validate :avatar_check
+  has_many :event_entries
 
   def avatar_check
     if avatar.present?

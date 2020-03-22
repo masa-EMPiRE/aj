@@ -6,13 +6,13 @@ class EventEntriesController < ApplicationController
   end
 
   def create
-    @evententry = EventEntry.new(evententry_params)
+    @evententry = current_user.event_entries.new(event_entry_params)
     @evententry.save
-    redirect_to "/"
+    redirect_to root_path	
   end
 
   private
-  def evententry_params
-    params.require(:evententry).permit(:event_id, :user_id)
+  def event_entry_params
+    params.permit(:event_id)
   end
 end

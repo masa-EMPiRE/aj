@@ -12,7 +12,8 @@
   <div class="event">
     <h3>Event List</h3>
     <% @farm.events.each do |event| %>
-      <%= link_to event.eventname, new_event_event_entry_path(event) %>
+      <%= event.eventname %>
+      <%= button_to "参加", event_event_entries_path(event) %>
     <% end %>
   </div>
 </div>

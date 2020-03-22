@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
-  belongs_to :event_entry
+  has_many :event_entries
   belongs_to :farm
 end
